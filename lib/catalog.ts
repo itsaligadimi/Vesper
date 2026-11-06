@@ -47,6 +47,8 @@ const synonyms: Record<string, string[]> = {
   warm: ["warm", "gold", "sand", "dune", "autumn", "alpenglow"],
   green: ["green", "forest", "trees", "terraces"],
   city: ["city", "skyline", "night", "lights", "harbour"],
+  anime: ["anime", "morevna", "castle", "cartoon"],
+  fantasy: ["fantasy", "dragon", "sintel", "magic", "forest"],
 }
 
 export function mediaURL(relative: string) {

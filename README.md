@@ -20,7 +20,7 @@ The app targets macOS 14 and later. It is Swift and AppKit, not a wrapped websit
 
 ## The collection
 
-Nine categories, twenty-nine wallpapers. Most stills are 4K 16:9. Loops are 1080p, ten seconds, silent, and cut so the first and last frames meet.
+Eleven categories, forty-eight wallpapers. Most stills are 4K 16:9. Loops are 1080p, about ten seconds, silent, and cut so the first and last frames meet.
 
 | Category | What is in it |
 | --- | --- |
@@ -30,14 +30,16 @@ Nine categories, twenty-nine wallpapers. Most stills are 4K 16:9. Loops are 1080
 | Cosmos | Milky Way, Rosette Nebula, Mývatn, a Lapland aurora, Earth from the ISS |
 | Cities | Hong Kong harbour, Singapore, the Bund |
 | Aerial | Teide above the clouds, Longsheng terraces, river mist |
-| Weather | Litli-Hrútur, Kirkjufell, the Tatras |
+| Weather | Litli-Hrútur, Kirkjufell, the Tatras, canyon shadows, canyon clouds |
 | Minimal | Thar dunes, Namib, a coral pattern |
 | Abstract | Afterglow, Veil, and Slow Dune, drawn for this project |
+| Anime | Morevna at the castle, from the freely licensed Morevna series |
+| Fantasy | Sintel's dragon and dunes, and the forest from Spring |
 
 Two kinds of motion are labeled in the app:
 
 - **Camera drift** is a slow pan across a still. It is an adaptation of the photograph, under the same license.
-- **Footage** is a real clip. Lake Aurora and Earth at the Limb are footage. The abstract loops are original and released as CC0.
+- **Footage** is a real clip: aurora, surf, glaciers, city traffic, the Orion flythrough, and scenes from Sintel, Spring, and Morevna. The abstract loops are original and released as CC0.
 
 Open a wallpaper to see the author, the license, and a link back to the file. The full list is in [CREDITS.md](CREDITS.md).
 

@@ -5,6 +5,7 @@ import Image from "next/image"
 import {
   Binoculars,
   Building2,
+  Castle,
   Circle,
   CloudSun,
   Film,
@@ -14,6 +15,7 @@ import {
   Paintbrush,
   Search,
   Sparkles,
+  Swords,
   Waves,
   X,
 } from "lucide-react"
@@ -47,6 +49,8 @@ const ICONS: Record<string, typeof Leaf> = {
   weather: CloudSun,
   minimal: Circle,
   abstract: Paintbrush,
+  anime: Swords,
+  fantasy: Castle,
 }
 
 type Section = "home" | "explore" | "favorites" | string

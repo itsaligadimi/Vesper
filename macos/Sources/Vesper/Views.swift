@@ -163,6 +163,8 @@ struct RootView: View {
         case "weather": return "cloud.sun"
         case "minimal": return "circle.lefthalf.filled"
         case "abstract": return "paintpalette"
+        case "anime": return "sparkle"
+        case "fantasy": return "crown"
         default: return "photo"
         }
     }

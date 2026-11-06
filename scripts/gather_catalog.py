@@ -37,6 +37,8 @@ CATEGORIES = [
     {"id": "weather", "name": "Weather", "blurb": "Storm light, snow, and a volcano that will not sit still."},
     {"id": "minimal", "name": "Minimal", "blurb": "Dunes, pattern, and quiet color."},
     {"id": "abstract", "name": "Abstract", "blurb": "Original light studies made for the desktop."},
+    {"id": "anime", "name": "Anime", "blurb": "Freely licensed animation, drawn to move."},
+    {"id": "fantasy", "name": "Fantasy", "blurb": "Dragons, ridgelines, and woods from open films."},
 ]
 
 # focus is (x, y) in 0..1, where the 16:9 crop is anchored.
@@ -152,6 +154,101 @@ FOOTAGE_ENTRIES = [
          tags=["earth", "space", "clouds", "orbit", "blue", "nasa"],
          footage="ISS_4K_Crew_Earth_Observations.webm", start=20, duration=10,
          featured=True),
+    dict(id="cosmos-valin-aurora", title="Aurora over Mount Valin", category="cosmos",
+         file="File:2016-09 Aurora timelapse Saguenay.webm",
+         location="Mount Valin, Saguenay",
+         tags=["aurora", "night", "forest", "stars", "green"],
+         footage="saguenay.webm", start=0.4, duration=10),
+    dict(id="cosmos-kjaerfjord", title="Aurora over Kjærfjord", category="cosmos",
+         file="File:Nordlys i Kjærfjorden.webm",
+         location="Kjærfjord, Norway",
+         tags=["aurora", "snow", "fjord", "night", "stars"],
+         footage="kjaerfjord.webm", start=0, duration=8),
+    dict(id="ocean-herzliya", title="Surf at Herzliya", category="ocean",
+         file="File:Water waves in Herzliya beach.webm",
+         location="Herzliya, Israel",
+         tags=["ocean", "waves", "beach", "surf", "calm"],
+         footage="herzliya.webm", start=1, duration=10),
+    dict(id="ocean-fortune-cove", title="Good Fortune Cove", category="ocean",
+         file="File:Ocean waves at Good Fortune Cove, Cooks Chasm 01.mov.webm",
+         location="Cooks Chasm, Oregon",
+         tags=["ocean", "waves", "rocks", "coast", "dramatic"],
+         footage="fortune.webm", start=10, duration=10),
+    dict(id="ocean-hurricane-point", title="Hurricane Point", category="ocean",
+         file="File:Waves off of Hurricane Point Vista Point, Big Sur.webm",
+         location="Big Sur, California",
+         tags=["ocean", "waves", "stacks", "coast", "blue"],
+         footage="hurricane.webm", start=38, duration=10),
+    dict(id="weather-bellevue", title="Clouds over Bellevue Canyon", category="weather",
+         file="File:Timelapse of Clouds over Bellevue Canyon.webm",
+         location="Bellevue Canyon",
+         tags=["clouds", "sky", "canyon", "weather", "day"],
+         footage="bellevue.webm", start=4, duration=10),
+    dict(id="nature-lake-fog", title="Morning Fog on the Lake", category="nature",
+         file="File:Morning Fog on Lake BRoll 10s.webm",
+         location="Alabama",
+         tags=["fog", "lake", "trees", "calm", "morning"],
+         footage="lakefog.webm", start=0, duration=10),
+    dict(id="cosmos-orion", title="Flight through Orion", category="cosmos",
+         file="File:Flight through Orion Nebula in visible light (Hubblecast 106b excerpt).webm",
+         location="Orion Nebula",
+         tags=["nebula", "space", "stars", "cosmos", "orion"],
+         footage="orion.webm", start=2, duration=10),
+    dict(id="cosmos-pillars", title="Pillars of Creation", category="cosmos",
+         file="File:3D data visualisation of the Pillars of Creation (eso1518a).webm",
+         location="Eagle Nebula",
+         tags=["nebula", "space", "pillars", "stars", "cosmos"],
+         footage="pillars.webm", start=0, duration=9.5),
+    dict(id="weather-canyon-shadows", title="Shadows on the Grand Canyon", category="weather",
+         file="File:Grand Canyon Clouds time lapse VP8.webm",
+         location="Grand Canyon",
+         tags=["canyon", "clouds", "desert", "dramatic", "day"],
+         footage="canyon.webm", start=0, duration=10),
+    dict(id="cosmos-joshua-stars", title="Stars over Headstone Rock", category="cosmos",
+         file="File:Stars in Joshua Tree National Park.webm",
+         location="Joshua Tree National Park",
+         tags=["stars", "night", "desert", "trees", "cosmos"],
+         footage="joshua.webm", start=2, duration=10),
+    dict(id="aerial-trimble", title="Trimble Glacier", category="aerial",
+         file="File:Trimble Glacier Aerial 1.webm",
+         location="Trimble Glacier",
+         tags=["glacier", "ice", "aerial", "snow", "mountains"],
+         footage="trimble.webm", start=8, duration=10),
+    dict(id="aerial-swallow-falls", title="Swallow Falls", category="aerial",
+         file="File:Rhaeadr Ewynnol, Betws-y-coed - waterfall in Wales.webm",
+         location="Betws-y-coed, Wales",
+         tags=["waterfall", "forest", "aerial", "green", "river"],
+         footage="swallow.webm", start=80, duration=10),
+    dict(id="cities-bay-lights", title="Bay Lights", category="cities",
+         file="File:City at night.webm",
+         location="San Francisco",
+         tags=["city", "night", "lights", "bridge", "traffic"],
+         footage="sfnight.webm", start=4, duration=10),
+    dict(id="mountains-swiss-alps", title="Swiss Alps Ridge", category="mountains",
+         file="File:Aerial views of the Swiss Alps.webm",
+         location="Swiss Alps",
+         tags=["mountains", "aerial", "ridge", "clouds", "dramatic"],
+         footage="alps.webm", start=110, duration=10),
+    dict(id="fantasy-sintel-dunes", title="Sintel's Dunes", category="fantasy",
+         file="File:Sintel trailer-1080p.ogv",
+         location="Sintel",
+         tags=["fantasy", "dunes", "sintel", "desert", "film"],
+         footage="sintel.webm", start=38, duration=6, letterbox=True),
+    dict(id="fantasy-sintel-dragon", title="Scale", category="fantasy",
+         file="File:Sintel trailer-1080p.ogv",
+         location="Sintel",
+         tags=["fantasy", "dragon", "sintel", "sky", "film"],
+         footage="sintel.webm", start=32, duration=6, letterbox=True, featured=True),
+    dict(id="fantasy-spring-forest", title="Spring in the Wood", category="fantasy",
+         file="File:Spring - Blender Open Movie.webm",
+         location="Spring",
+         tags=["fantasy", "forest", "magic", "mist", "spring"],
+         footage="spring.webm", start=98, duration=8),
+    dict(id="anime-morevna-castle", title="Morevna at the Castle", category="anime",
+         file="File:Morevna Episode 3.0.2 (English).webm",
+         location="Morevna",
+         tags=["anime", "castle", "morevna", "fantasy", "cartoon"],
+         footage="morevna.webm", start=133, duration=8, featured=True),
 ]
 
 
@@ -285,9 +382,11 @@ def make_drift(src: Path, dest: Path) -> float:
     return 10.0
 
 
-def make_footage(src: Path, dest_video: Path, dest_still: Path, start: float, duration: float) -> tuple[int, int, float]:
+def make_footage(src: Path, dest_video: Path, dest_still: Path, start: float, duration: float, letterbox: bool = False) -> tuple[int, int, float]:
     dest_video.parent.mkdir(parents=True, exist_ok=True)
-    vf = "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24,format=yuv420p"
+    # Letterboxed film frames get the black bars cut off before the 16:9 fill.
+    bars = "crop=iw:ih*0.75:0:(ih-ih*0.75)/2," if letterbox else ""
+    vf = bars + "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=24,format=yuv420p"
     run(
         [
             "ffmpeg", "-y", "-ss", str(start), "-t", str(duration), "-i", str(src),
@@ -299,7 +398,7 @@ def make_footage(src: Path, dest_video: Path, dest_still: Path, start: float, du
     run(
         [
             "ffmpeg", "-y", "-ss", str(start + 1.5), "-i", str(src), "-frames:v", "1",
-            "-vf", "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080",
+            "-vf", bars + "scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080",
             "-q:v", "3", str(dest_still),
         ]
     )
@@ -490,7 +589,8 @@ def build() -> None:
             raise SystemExit(f"missing footage {src}")
         print(f"footage {entry['title']}")
         width, height, duration = make_footage(
-            src, folder / "loop.mp4", folder / "still.jpg", entry["start"], entry["duration"]
+            src, folder / "loop.mp4", folder / "still.jpg", entry["start"], entry["duration"],
+            letterbox=bool(entry.get("letterbox")),
         )
         make_thumb(folder / "still.jpg", folder / "thumb.jpg")
         wallpapers.append(record(entry, info, width, height, width, height, duration, "footage"))
