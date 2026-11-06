@@ -43,13 +43,19 @@ Open a wallpaper to see the author, the license, and a link back to the file. Th
 
 ![Preview of Beauchamp Falls, with the ten-second loop and its license](docs/screenshots/preview.png)
 
+## Download
+
+The installable Mac app is attached to [the latest release](https://github.com/itsaligadimi/Vesper/releases/latest) as `Vesper-macOS.zip`. Unzip it and drag **Vesper** into Applications.
+
+The build is signed on the machine that compiled it. It is not notarized, so the first open needs a right-click on the app, then **Open**, then **Open** again.
+
 ## Put it on a Mac
 
 You need macOS 14 or later, and either Xcode or the Command Line Tools (`xcode-select --install`).
 
 ```bash
-git clone <this repository>
-cd <this repository>
+git clone https://github.com/itsaligadimi/Vesper.git
+cd Vesper
 cd macos && ./scripts/build-app.sh
 open dist/Vesper.app
 ```
@@ -58,14 +64,14 @@ The script compiles a release binary, copies `catalog/` into the app, and ad-hoc
 
 The build is not notarized. The first time you open it, macOS may refuse a double-click. Right-click the app, choose **Open**, then **Open** again. There is no Homebrew cask.
 
-GitHub Actions on `macos-14` runs the same script and uploads `Vesper.app` as a build artifact. That artifact is the same unsigned app.
+GitHub Actions on `macos-14` runs the same script and publishes `Vesper-macOS.zip` on the v1.0.0 release.
 
 ### Point the app at GitHub
 
-The copy you just built already contains the catalog, so it works with no network. Once this repository is public on GitHub, installed copies can refresh the library from the files in git.
+The copy you just built already contains the catalog, so it works with no network. Installed copies refresh the library from the files in git.
 
-1. Set `repository` in [`catalog/source.json`](catalog/source.json) to `owner/name`. Leave `branch` as `main` unless you publish elsewhere.
-2. In the app, open **Settings** and enter the same `owner/name`, or the GitHub URL. **Refresh catalog** reads:
+1. [`catalog/source.json`](catalog/source.json) points at `itsaligadimi/Vesper` on `main`. A fork should change that to its own `owner/name`.
+2. In the app, open **Settings** and enter `itsaligadimi/Vesper`, or the GitHub URL. **Refresh catalog** reads:
 
 ```text
 https://raw.githubusercontent.com/<owner>/<name>/<branch>/catalog/manifest.json

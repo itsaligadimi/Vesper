@@ -3,18 +3,38 @@ name: macOS
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
+
       - name: Build Vesper.app
         run: ./macos/scripts/build-app.sh
+
+      - name: Zip the app
+        run: ditto -c -k --keepParent macos/dist/Vesper.app Vesper-macOS.zip
+
       - uses: actions/upload-artifact@v4
         with:
           name: Vesper-macOS
-          path: macos/dist/Vesper.app
+          path: Vesper-macOS.zip
           if-no-files-found: error
+
+      - name: Publish the downloadable release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Vesper 1.0.0 for Mac"
+          notes="Download Vesper-macOS.zip, unzip it, and drag Vesper into Applications. The app is not notarized, so the first open needs a right-click, then Open, then Open again. Requires macOS 14 or later. The catalog is inside the app, and Settings can refresh it from this repository."
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            gh release upload v1.0.0 Vesper-macOS.zip --clobber
+            gh release edit v1.0.0 --title "$title" --notes "$notes" --latest
+          else
+            gh release create v1.0.0 Vesper-macOS.zip --title "$title" --notes "$notes" --latest
+          fi
