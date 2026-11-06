@@ -58,7 +58,7 @@ final class CatalogStore: ObservableObject {
 
         catalog = loaded
         usingRemoteManifest = remoteUsed
-        if let localRoot, remoteUsed {
+        if localRoot != nil, remoteUsed {
             sourceDescription = "GitHub catalog, with local files when they are already on disk"
         } else if remoteUsed {
             sourceDescription = "GitHub catalog"

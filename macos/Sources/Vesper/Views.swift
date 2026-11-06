@@ -92,7 +92,7 @@ struct RootView: View {
             ProgressView("Opening the library")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         } else if let message = catalog.errorMessage, catalog.catalog == nil {
-            ContentUnavailableView("Catalog unavailable", systemImage: "externaldrive.badge.exclamationmark", description: { Text(message) })
+            ContentUnavailableView("Catalog unavailable", systemImage: "externaldrive.badge.exclamationmark", description: Text(message))
         } else {
             ZStack(alignment: .trailing) {
                 Group {
@@ -250,7 +250,7 @@ struct GalleryView: View {
                     SearchField(text: $query).frame(width: 260)
                 }
                 if wallpapers.isEmpty {
-                    ContentUnavailableView(title, systemImage: "rectangle.dashed", description: { Text(empty) })
+                    ContentUnavailableView(title, systemImage: "rectangle.dashed", description: Text(empty))
                         .padding(.top, 40)
                 } else {
                     LazyVGrid(columns: columns, spacing: 16) {
@@ -593,7 +593,7 @@ struct ImportsView: View {
                 }
                 dropWell
                 if library.imports.isEmpty {
-                    ContentUnavailableView("No videos yet", systemImage: "film", description: { Text("A clip you import shows up here, then applies like any other wallpaper.") })
+                    ContentUnavailableView("No videos yet", systemImage: "film", description: Text("A clip you import shows up here, then applies like any other wallpaper."))
                         .padding(.top, 12)
                 } else {
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 220, maximum: 320), spacing: 16)], spacing: 16) {
@@ -610,7 +610,7 @@ struct ImportsView: View {
             switch result {
             case .success(let url):
                 Task {
-                    do { try await library.importFile(at: url) } catch { error = error.localizedDescription }
+                    do { try await library.importFile(at: url) } catch let importError { error = importError.localizedDescription }
                 }
             case .failure(let failure):
                 error = failure.localizedDescription
@@ -635,7 +635,7 @@ struct ImportsView: View {
                     }
                     guard let url else { return }
                     Task { @MainActor in
-                        do { try await library.importFile(at: url) } catch { error = error.localizedDescription }
+                        do { try await library.importFile(at: url) } catch let importError { error = importError.localizedDescription }
                     }
                 }
                 return true

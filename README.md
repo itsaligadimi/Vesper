@@ -64,7 +64,7 @@ The script compiles a release binary, copies `catalog/` into the app, and ad-hoc
 
 The build is not notarized. The first time you open it, macOS may refuse a double-click. Right-click the app, choose **Open**, then **Open** again. There is no Homebrew cask.
 
-GitHub Actions on `macos-14` runs the same script and publishes `Vesper-macOS.zip` on the v1.0.0 release.
+GitHub Actions runs the same script on the current macOS runner and publishes `Vesper-macOS.zip` on the v1.0.0 release.
 
 ### Point the app at GitHub
 
